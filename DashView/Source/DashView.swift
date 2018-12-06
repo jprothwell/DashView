@@ -28,6 +28,7 @@ import UIKit
     @IBInspectable open var dashWidth: CGFloat = 3.0
     @IBInspectable open var dashSpace: CGFloat = 1.0
     @IBInspectable open var dashColor: UIColor = UIColor.darkGray
+    @IBInspectable open var dashAxis: NSInteger = 0//0:horizontal 1:vertical . others default horizontal .
     
     //MARK- Initializers
     
@@ -47,10 +48,19 @@ import UIKit
         if let context = UIGraphicsGetCurrentContext() {
             context.setFillColor(self.dashColor.cgColor)
             
-            var nextDashFrame = CGRect(x: 0.0, y: 0.0, width: self.dashWidth, height: rect.size.height)
-            while nextDashFrame.origin.x < rect.size.width {
-                context.fill(nextDashFrame)
-                nextDashFrame.origin.x += (self.dashWidth + self.dashSpace)
+            if 1 == self.dashAxis {
+                var nextDashFrame = CGRect(x: 0.0, y: 0.0, width: rect.size.width, height: self.dashWidth)
+                while nextDashFrame.origin.y < rect.size.height {
+                    context.fill(nextDashFrame)
+                    nextDashFrame.origin.y += (self.dashWidth + self.dashSpace)
+                }
+            }
+            else {
+                var nextDashFrame = CGRect(x: 0.0, y: 0.0, width: self.dashWidth, height: rect.size.height)
+                while nextDashFrame.origin.x < rect.size.width {
+                    context.fill(nextDashFrame)
+                    nextDashFrame.origin.x += (self.dashWidth + self.dashSpace)
+                }
             }
         }
     }

@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,15 +18,15 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAx-IJ-eCM" customClass="DashView" customModule="DashView" customModuleProvider="target">
-                                <rect key="frame" x="30" y="88" width="560" height="2"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="37.5" y="80" width="300" height="2"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="2" id="G39-S0-Qau"/>
+                                    <constraint firstAttribute="width" constant="300" id="foW-Jm-n0i"/>
+                                    <constraint firstAttribute="height" constant="2" id="zFl-nn-Tzo"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="dashWidth">
@@ -32,26 +36,50 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="dashColor">
-                                        <color key="value" red="0.36763836030000002" green="0.35679426390000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.36763836030000002" green="0.35679426390000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dashAxis">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUn-3d-Ejb" customClass="DashView" customModule="DashView" customModuleProvider="target">
+                                <rect key="frame" x="186.5" y="122" width="2" height="300"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="3Fh-LL-S6G"/>
+                                    <constraint firstAttribute="height" constant="300" id="rrC-Sj-R4y"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dashWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dashSpace">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dashColor">
+                                        <color key="value" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dashAxis">
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhP-Rv-pSN">
-                                <rect key="frame" x="268" y="28" width="65" height="21"/>
-                                <animations/>
+                                <rect key="frame" x="155" y="28" width="65" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QAx-IJ-eCM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="LVS-FK-gVq"/>
-                            <constraint firstItem="QAx-IJ-eCM" firstAttribute="top" secondItem="MhP-Rv-pSN" secondAttribute="bottom" constant="39" id="V0F-Xp-AKL"/>
-                            <constraint firstItem="MhP-Rv-pSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hXN-ia-Uhz"/>
-                            <constraint firstItem="MhP-Rv-pSN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ocb-1q-L3H"/>
-                            <constraint firstItem="QAx-IJ-eCM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="xKp-65-l5f"/>
+                            <constraint firstItem="JUn-3d-Ejb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1E6-x2-gmK"/>
+                            <constraint firstItem="QAx-IJ-eCM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5mJ-XM-jGI"/>
+                            <constraint firstItem="JUn-3d-Ejb" firstAttribute="top" secondItem="QAx-IJ-eCM" secondAttribute="bottom" constant="40" id="L8J-Go-FdB"/>
+                            <constraint firstItem="MhP-Rv-pSN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="O5h-l8-tHY"/>
+                            <constraint firstItem="QAx-IJ-eCM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="QNK-sh-qWM"/>
+                            <constraint firstItem="MhP-Rv-pSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pfS-5F-Kpv"/>
                         </constraints>
                     </view>
                 </viewController>
